@@ -1,0 +1,7 @@
+accelerate
+deepspeed
+transformers
+setuptools==59.5.0
+pandas
+cpm_kernels
+sentencepiece
