@@ -30,7 +30,7 @@ TODO, To be finalised before 15. July 2023
 
 ```bibtex
 @article{zheng2023secrets,
-  title={Secrets of RLHF in Large Language Models Part II: PPO}, 
+  title={Secrets of RLHF in Large Language Models Part I: PPO}, 
   author={Rui Zheng and Shihan Dou and Songyang Gao and Yuan Hua and Wei Shen and Binghai Wang and Yan Liu and Senjie Jin and Qin Liu and Yuhao Zhou and Limao Xiong and Lu Chen and Zhiheng Xi and Nuo Xu and Wenbin Lai and Minghao Zhu and Cheng Chang and Zhangyue Yin and Rongxiang Weng and Wensen Cheng and Haoran Huang and Tianxiang Sun and Hang Yan and Tao Gui and Qi Zhang and Xipeng Qiu and Xuanjing Huang},
   year={2023}
 }
