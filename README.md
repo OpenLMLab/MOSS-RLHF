@@ -1,6 +1,6 @@
 # MOSS-RLHF
 
-### *MOSS-RLHF & "Secrets of RLHF in Large Language Models Part II: PPO" <br>👉 <a href="https://openlmlab.github.io/MOSS-RLHF/assets/paper/SecretsOfRLHFPart1.pdf" target="_blank">[Technical report]*</a>
+### *MOSS-RLHF & "Secrets of RLHF in Large Language Models Part I: PPO" <br>👉 <a href="https://openlmlab.github.io/MOSS-RLHF/assets/paper/SecretsOfRLHFPart1.pdf" target="_blank">[Technical report]*</a>
 
 <p align="center" width="100%">
 <a href="https://openlmlab.github.io/MOSS-RLHF/assets/paper/SecretsOfRLHFPart1.pdf" target="_blank"><img src="./assets/img/moss.png" alt="MOSS" style="width: 50%; min-width: 300px; display: block; margin: auto;"></a>
@@ -9,7 +9,7 @@
 [![Data License](https://img.shields.io/badge/Data%20License-CC%20BY--NC%204.0-blue.svg)](./DATA_LICENSE)
 [![Model License](https://img.shields.io/badge/Model%20License-GNU%20AGPL%203.0-red.svg)](./MODEL_LICENSE)
 
-This is the open-source code repository for the technical report: "Secrets of RLHF in Large Language Models Part II: PPO"
+This is the open-source code repository for the technical report: "Secrets of RLHF in Large Language Models Part I: PPO"
 
 <img style="width: 90%; min-width: 500px; display: block; margin: auto; margin-bottom: 20px" alt="MOSS-RLHF" src="./assets/img/img1.jpg">
 
