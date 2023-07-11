@@ -40,7 +40,29 @@ Run code in a few steps.
 
 ### 🔩 Requirements & Setup
 
-TODO: To be finalised before 12. July 2023
+This repository works on Python 3.8 and PyTorch 1.13.1.
+
+We recommend using the **conda** virtual environment to run the code.
+
+#### Step 1: create a new Python virtual environment
+```bash
+conda update conda -n base -c defaults
+conda create -n rlhf python=3.8
+conda activate rlhf
+```
+#### Step 2: install PyTorch and TensorBoard
+```bash
+conda install pytorch==1.13.1 pytorch-cuda=11.7 tensorboard -c pytorch -c nvidia
+```
+
+#### Step 3: install the remaining dependencies
+```bash
+conda install datasets accelerate safetensors chardet cchardet -c huggingface -c conda-forge
+pip3 install transformers sentencepiece einops triton==1.0.0 rouge jionlp==1.4.14 nltk sacrebleu cpm_kernels
+
+apt install libaio-dev
+DS_BUILD_OPS=1 pip install deepspeed
+```
 
 ### 👉 Start Training
 
