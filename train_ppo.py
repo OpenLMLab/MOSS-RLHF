@@ -103,8 +103,8 @@ class Llama(LlamaForCausalLM):
         preds_scores = []
         for i in range(bsz):
             seq: torch.LongTensor = decoder_input[i, :lengths[i, ]]
-            beams = (float(scores[i, ]), seq.tolist())
-            preds_scores.append([beams])
+            res_scores = (float(scores[i, ]), seq.tolist())
+            preds_scores.append([res_scores])
 
         best_preds_scores = [preds[0] for preds in preds_scores]
         return best_preds_scores, preds_scores
