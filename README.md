@@ -18,7 +18,7 @@ This is the open-source code repository for the technical report: "Secrets of RL
 
 
 ## Open-source List
-- Two 7B reward model based on openChineseLlama and Llama-7B, respectively.
+- Two 7B reward models based on openChineseLlama and Llama-7B, respectively.
 - Open source code for RL training in large language models.
 - ...
 
