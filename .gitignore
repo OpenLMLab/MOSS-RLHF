@@ -6,14 +6,8 @@ test*.sh
 *.csv
 .idea
 test_code*.py
-data_helper_deprecated.py
-deploy/
-temp*
-data/*
-models/*
 tensorboard_log/*
 tmp/
 log/
-data/
 debug/
 inference/
