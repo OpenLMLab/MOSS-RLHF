@@ -14,16 +14,18 @@
 Due to the challenges of reward design, environment interaction, and agent training, coupled with huge trial and error cost of large language models, there is a significant barrier for AI researchers to motivate the development of technical alignment and safe landing of LLMs. The stable training of RLHF has still been a puzzle.
 In this technical report, we intend to help researchers to train their models stably with human feedback.
 
->Contributions are summarized as follows: 
->1) We release competitive Chinese and English reward models, respectively, which have good cross-model generalization ability, alleviating the cost of relabeling human preference data; 
->2) We conduct in-depth analysis on the inner workings of PPO algorithm and propose the PPO-max algorithm to ensure stable model training;
->3) We release the complete PPO-max codes to ensure that the LLMs in the current SFT stage can be better aligned with humans.
+Contributions are summarized as follows: 
+1) We release competitive Chinese and English reward models, respectively, which have good cross-model generalization ability, alleviating the cost of relabeling human preference data; 
+2) We conduct in-depth analysis on the inner workings of PPO algorithm and propose the PPO-max algorithm to ensure stable model training;
+3) We release the complete PPO-max codes to ensure that the LLMs in the current SFT stage can be better aligned with humans.
 
-<img style="width: 90%; min-width: 500px; display: block; margin: auto; margin-bottom: 20px" alt="MOSS-RLHF" src="./assets/img/img1.jpg">
+<div align="center" width="100%">
+<img style="width: 80%; min-width: 500px; display: block; margin: auto; margin-bottom: 20px" alt="MOSS-RLHF" src="./assets/img/img1.jpg">
+</div>
 
-
-<img style="width: 90%; min-width: 500px; display: block; margin: auto; margin-bottom: 20px" alt="MOSS-RLHF" src="./assets/img/img2.jpg">
-
+<div align="center" width="100%">
+<img style="width: 80%; min-width: 500px; display: block; margin: auto; margin-bottom: 20px" alt="MOSS-RLHF" src="./assets/img/img2.jpg">
+</div>
 
 ## 🧾 Open-source List
 - A 7B Chinese reward model based on openChineseLlama.
