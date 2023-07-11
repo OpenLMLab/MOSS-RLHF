@@ -1,0 +1,129 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>MOSS-RLHF</title>
+
+    <meta name="author" content="Ablustrund">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- <link rel="icon" type="image/jpg" href="assets/img/moss.png"> -->
+
+</head>
+
+<body>
+    <table
+        style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <tbody>
+            <tr style="padding:0px">
+                <td style="padding:0px">
+                    <table
+                        style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                        <tbody>
+                            <tr style="padding:0px">
+                                <td style="padding:2.5%;width:100%;vertical-align:middle">
+                                    <p style="text-align:center">
+                                        <name><img style="max-height:50px;vertical-align: middle;"
+                                                src="assets/img/moss_logo.png" /></name>
+                                    </p>
+                                    <p style="text-align:center">
+                                        <name>MOSS - RLHF</name>
+                                    </p>
+                                    
+                                    <p style="text-align:center">
+                                        <a href="https://openlmlab.github.io/MOSS-RLHF/assets/paper/SecretsOfRLHFPart1.pdf">Technical report</a>
+                                        &nbsp/&nbsp
+                                        <a href="https://github.com/OpenLMLab/MOSS-RLHF">Code</a>
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+
+                    <table
+                        style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                        <tbody>
+                            <tr>
+                                <td style="padding:20px;width:100%;vertical-align:middle">
+                                    <heading>Introduction</heading>
+                                    <p>
+                                        Due to the challenges of reward design, environment interaction, and agent training, coupled with huge trial and error cost of large language models, there is a significant barrier for AI researchers to motivate the development of technical alignment and safe landing of LLMs. The stable training of RLHF has still been a puzzle. In this technical report, we intend to help researchers to train their models stably with human feedback.
+                                        <br><br>
+                                        Contributions are summarized as follows:
+                                        <br>
+                                        1) We release competitive Chinese and English reward models, respectively, which have good cross-model generalization ability, alleviating the cost of relabeling human preference data;
+                                        <br>
+                                        2) We conduct in-depth analysis on the inner workings of PPO algorithm and propose the PPO-max algorithm to ensure stable model training;
+                                        <br>
+                                        3) We release the complete PPO-max codes to ensure that the LLMs in the current SFT stage can be better aligned with humans.
+
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div align="center" width="100%">
+                        <img style="width: 80%; min-width: 500px; display: block; margin: auto; margin-bottom: 20px" alt="MOSS-RLHF" src="./assets/img/img1.jpg">
+                        </div>
+                        
+                        <div align="center" width="100%">
+                        <img style="width: 80%; min-width: 500px; display: block; margin: auto; margin-bottom: 20px" alt="MOSS-RLHF" src="./assets/img/img2.jpg">
+                        </div>
+                    <!-- <table
+                        style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                        <tbody>
+                            <tr>
+                                <td style="padding:20px;width:100%;vertical-align:middle">
+                                    <heading>Update</heading>
+                                    <ul>
+                                        <li> <b>2023/4/21</b>: We released the code, data, and models. Check out on the
+                                            <a href="https://github.com/OpenLMLab/MOSS">github page</a>.</li>
+                                        <li> <b>2023/3/30</b>: We are tuning the new version of MOSS (v0.0.3). The code,
+                                            checkpoints (including the base model, SFT model, preference model, and the
+                                            final model), and technical report will be released in April.</li>
+                                        <li> <b>2023/2/20</b>: We released an early version of MOSS (v0.0.2) to collect
+                                            user data.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table> -->
+<!-- 
+                    <table
+                        style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                        <tbody>
+                            <tr>
+                                <td style="padding:20px;width:100%;vertical-align:middle">
+                                    <heading>Introduction</heading>
+                                    <p>
+                                        Due to the challenges of reward design, environment interaction, and agent training, coupled with huge trial and error cost of large language models, there is a significant barrier for AI researchers to motivate the development of technical alignment and safe landing of LLMs. The stable training of RLHF has still been a puzzle. In this technical report, we intend to help researchers to train their models stably with human feedback.
+                                        <br><br>
+                                        Contributions are summarized as follows:
+                                        <br>
+                                        1) We release competitive Chinese and English reward models, respectively, which have good cross-model generalization ability, alleviating the cost of relabeling human preference data;
+                                        <br>
+                                        2) We conduct in-depth analysis on the inner workings of PPO algorithm and propose the PPO-max algorithm to ensure stable model training;
+                                        <br>
+                                        3) We release the complete PPO-max codes to ensure that the LLMs in the current SFT stage can be better aligned with humans.
+
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table> -->
+
+
+
+                </td>
+            </tr>
+    </table>
+</body>
+
+</html>
