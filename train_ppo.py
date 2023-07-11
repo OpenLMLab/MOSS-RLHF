@@ -105,7 +105,7 @@ class Llama(LlamaForCausalLM):
             seq: torch.LongTensor = decoder_input[i, :lengths[i, ]]
             beams = (float(scores[i, ]), seq.tolist())
             preds_scores.append([beams])
-            # get the top prediction for each beam (i.e. minibatch sample)
+
         best_preds_scores = [preds[0] for preds in preds_scores]
         return best_preds_scores, preds_scores
 
