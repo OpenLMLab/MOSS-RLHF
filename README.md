@@ -9,7 +9,15 @@
 [![Data License](https://img.shields.io/badge/Data%20License-CC%20BY--NC%204.0-blue.svg)](./DATA_LICENSE)
 [![Model License](https://img.shields.io/badge/Model%20License-GNU%20AGPL%203.0-red.svg)](./MODEL_LICENSE)
 
-This is the open-source code repository for the technical report: "Secrets of RLHF in Large Language Models Part I: PPO"
+## 🌠 Introduction
+
+Due to the challenges of reward design, environment interaction, and agent training, coupled with huge trial and error cost of large language models, there is a significant barrier for AI researchers to motivate the development of technical alignment and safe landing of LLMs. The stable training of RLHF has still been a puzzle.
+In this technical report, we intend to help researchers to train their models stably with human feedback.
+
+>Contributions are summarized as follows: 
+>1) We release competitive Chinese and English reward models, respectively, which have good cross-model generalization ability, alleviating the cost of relabeling human preference data; 
+>2) We conduct in-depth analysis on the inner workings of PPO algorithm and propose the PPO-max algorithm to ensure stable model training;
+>3) We release the complete PPO-max codes to ensure that the LLMs in the current SFT stage can be better aligned with humans.
 
 <img style="width: 90%; min-width: 500px; display: block; margin: auto; margin-bottom: 20px" alt="MOSS-RLHF" src="./assets/img/img1.jpg">
 
@@ -17,12 +25,21 @@ This is the open-source code repository for the technical report: "Secrets of RL
 <img style="width: 90%; min-width: 500px; display: block; margin: auto; margin-bottom: 20px" alt="MOSS-RLHF" src="./assets/img/img2.jpg">
 
 
-## Open-source List
-- Two 7B reward models based on openChineseLlama and Llama-7B, respectively.
+## 🧾 Open-source List
+- A 7B Chinese reward model based on openChineseLlama.
+- A 7B English reward model based on Llama-7B.
 - Open source code for RL training in large language models.
 - ...
 
-## Getting Started
+## ✨ Start training your own model!
+
+Run code in a few steps.
+
+### 🔩 Requirements & Setup
+
+TODO: To be finalised before 12. July 2023
+
+### 👉 Start Training
 
 TODO, To be finalised before 15. July 2023
 
