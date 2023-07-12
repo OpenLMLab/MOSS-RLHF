@@ -12,7 +12,7 @@
 
 ## 🌟 News
 ### 👉 Wed, 12. July 2023. We have released Chinese reward model based OpenChineseLlama-7B! 
-[moss-rlhf-reward-model-7B-zh](https://huggingface.co/Ablustrund/moss-rlhf-reward-model-7B-zh/tree/main])
+[moss-rlhf-reward-model-7B-zh](https://huggingface.co/Ablustrund/moss-rlhf-reward-model-7B-zh/tree/main)
 <br>
 
 ## 🌠 Introduction
