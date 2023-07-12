@@ -15,6 +15,14 @@
 [moss-rlhf-reward-model-7B-zh](https://huggingface.co/Ablustrund/moss-rlhf-reward-model-7B-zh/tree/main)
 <br>
 
+## 🧾 Open-source List
+- [x] Open source code for RL training in large language models.
+- [x] A 7B Chinese reward model based on openChineseLlama.
+- [ ] A 7B English reward model based on Llama-7B.
+- [ ] SFT model for English.
+- [ ] Policy model for English after RLHF.
+- ...
+
 ## 🌠 Introduction
 
 Due to the challenges of reward design, environment interaction, and agent training, coupled with huge trial and error cost of large language models, there is a significant barrier for AI researchers to motivate the development of technical alignment and safe landing of LLMs. The stable training of RLHF has still been a puzzle.
@@ -32,14 +40,6 @@ Contributions are summarized as follows:
 <div align="center" width="100%">
 <img style="width: 80%; min-width: 500px; display: block; margin: auto; margin-bottom: 20px" alt="MOSS-RLHF" src="./assets/img/img2.jpg">
 </div>
-
-## 🧾 Open-source List
-- [x] Open source code for RL training in large language models.
-- [x] A 7B Chinese reward model based on openChineseLlama.
-- [ ] A 7B English reward model based on Llama-7B.
-- [ ] SFT model for English.
-- [ ] Policy model for English after RLHF.
-- ...
 
 
 ## 🔩 Requirements & Setup
