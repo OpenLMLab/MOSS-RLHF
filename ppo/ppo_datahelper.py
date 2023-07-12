@@ -9,14 +9,17 @@ from transformers.models.llama.tokenization_llama import LlamaTokenizer
 from torch.utils.data import get_worker_info, IterableDataset
 from utils import print_rank_0, pad_sequences
 
-def special_prompt_choices(opt):
-    human_prompt = "<|Human|>" if opt.lang == 'zh' else "Human:"
-    assistant_prompt = "<|MOSS|>" if opt.lang == 'zh' else "MOSS:"
-    return human_prompt, assistant_prompt
+
+def get_human_prompt(opt):
+    return "<|Human|>" if opt.lang == 'zh' else "Human:"
+
+
+def get_assistant_prompt(opt):
+    return "<|MOSS|>" if opt.lang == 'zh' else "Assistant:"
+
 
 def get_tokenizer(opt):
     print_rank_0(f"Loading tokenizer from huggingface: {opt.tokenizer_name_or_path}...", only_on_cuda0=True)
-    human_prompt, assistant_prompt = special_prompt_choices(opt)
     tokenizer = LlamaTokenizer.from_pretrained(opt.tokenizer_name_or_path, trust_remote_code=True)
     tokenizer.bos_token = '<s>'
     tokenizer.eos_token = '</s>'
@@ -25,8 +28,7 @@ def get_tokenizer(opt):
     tokenizer.unk_token = tokenizer.pad_token
     tokenizer.unk_token_id = tokenizer.pad_token_id
     if opt.lang == 'zh':
-        tokenizer.add_special_tokens({"additional_special_tokens": [human_prompt, assistant_prompt]})
-
+        tokenizer.add_special_tokens({"additional_special_tokens": [get_human_prompt(opt), get_assistant_prompt(opt)]})
     print_rank_0(f"Llama tokenizer size: {tokenizer.vocab_size}", only_on_cuda0=True)
     print_rank_0(f"Llama tokenizer pad token: {tokenizer.pad_token}, pad_token_id: {tokenizer.pad_token_id}", only_on_cuda0=True)
     print_rank_0(f"Llama tokenizer. special token: {tokenizer.special_tokens_map}", only_on_cuda0=True)
@@ -35,11 +37,10 @@ def get_tokenizer(opt):
 
 
 def get_special_prompt(i, opt):
-    human_prompt, assistant_prompt = special_prompt_choices(opt)
-    return human_prompt if i % 2 == 0 else assistant_prompt
+    return get_human_prompt(opt) if i % 2 == 0 else get_assistant_prompt(opt)
 
 def get_model_prompt(context: List[str], eos_token="</s>", opt=None):
-    human_prompt, assistant_prompt = special_prompt_choices(opt)
+    human_prompt, assistant_prompt = get_human_prompt(opt), get_assistant_prompt(opt)
     if context[-1].startswith(human_prompt):
         end_prompt = assistant_prompt
     elif context[-1].startswith(assistant_prompt):
@@ -310,7 +311,6 @@ class PPOSFTDataset(IterDataset):
         return output
 
     def format(self, sample: Tuple[List[str], str]) -> Dict[str, Any]:
-        human_prompt, assistant_prompt = special_prompt_choices(self.opt)
         # original text concat special prompt: human prompt and assistant prompt
         context = [get_special_prompt(i, self.opt) + u for i, u in enumerate(sample)]
             
