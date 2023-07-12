@@ -1,6 +1,6 @@
 # MOSS-RLHF
 
-### *MOSS-RLHF & "Secrets of RLHF in Large Language Models Part I: PPO" <br>👉 <a href="https://arxiv.org/abs/2307.04964" target="_blank">[Technical report]</a>  <a href="https://github.com/OpenLMLab/MOSS-RLHF" target="_blank">[Open-source code]*
+### *MOSS-RLHF & "Secrets of RLHF in Large Language Models Part I: PPO" <br>👉 <a href="https://arxiv.org/abs/2307.04964" target="_blank">[Technical report]</a>  <a href="https://openlmlab.github.io/MOSS-RLHF/" target="_blank">[Home page]*
 
 
 <p align="center" width="100%">
