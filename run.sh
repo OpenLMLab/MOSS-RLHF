@@ -35,5 +35,6 @@ train_ppo.py \
     --rollout_batch_size 2 \
     --num_rollouts 2 \
     --gradient_checkpoint \
+    --lang zh \
     --logdir /home/xxx/MOSS-RLHF/outputs/tensorboard_log/ppo/ppo_model \
 &> /home/MOSS-RLHF/outputs/log/ppo_model.log
