@@ -11,3 +11,4 @@ tmp/
 log/
 debug/
 inference/
+models/*

@@ -64,7 +64,7 @@ def parse_args():
     parser.add_argument('--topp', type=float, default=0.9, help='nucleus sampling')
     
     # Option for language
-    parse_args.add_argument('--lang', type=str, choices=['zh', 'en'], help='language prompt for PPO-max-zh or PPO-max-en')
+    parser.add_argument('--lang', type=str, choices=['zh', 'en'], help='special prompt choice for PPO-max-zh or PPO-max-en')
 
     opt = parser.parse_args()
 

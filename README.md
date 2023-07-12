@@ -10,6 +10,19 @@
 [![Data License](https://img.shields.io/badge/Data%20License-CC%20BY--NC%204.0-blue.svg)](./DATA_LICENSE)
 [![Model License](https://img.shields.io/badge/Model%20License-GNU%20AGPL%203.0-red.svg)](./MODEL_LICENSE)
 
+## 🌟 News
+### 👉 Wed, 12. July 2023. We have released Chinese reward model based OpenChineseLlama-7B! 
+[moss-rlhf-reward-model-7B-zh](https://huggingface.co/Ablustrund/moss-rlhf-reward-model-7B-zh/tree/main)
+<br>
+
+## 🧾 Open-source List
+- [x] Open source code for RL training in large language models.
+- [x] A 7B Chinese reward model based on openChineseLlama.
+- [ ] A 7B English reward model based on Llama-7B.
+- [ ] SFT model for English.
+- [ ] Policy model for English after RLHF.
+- ...
+
 ## 🌠 Introduction
 
 Due to the challenges of reward design, environment interaction, and agent training, coupled with huge trial and error cost of large language models, there is a significant barrier for AI researchers to motivate the development of technical alignment and safe landing of LLMs. The stable training of RLHF has still been a puzzle.
@@ -28,34 +41,25 @@ Contributions are summarized as follows:
 <img style="width: 80%; min-width: 500px; display: block; margin: auto; margin-bottom: 20px" alt="MOSS-RLHF" src="./assets/img/img2.jpg">
 </div>
 
-## 🧾 Open-source List
-- A 7B Chinese reward model based on openChineseLlama.
-- A 7B English reward model based on Llama-7B.
-- Open source code for RL training in large language models.
-- ...
 
-## ✨ Start training your own model!
-
-Run code in a few steps.
-
-### 🔩 Requirements & Setup
+## 🔩 Requirements & Setup
 
 This repository works on Python 3.8 and PyTorch 1.13.1.
 
 We recommend using the **conda** virtual environment to run the code.
 
-#### Step 1: create a new Python virtual environment
+#### Step 1: Create a new Python virtual environment
 ```bash
 conda update conda -n base -c defaults
 conda create -n rlhf python=3.8
 conda activate rlhf
 ```
-#### Step 2: install PyTorch and TensorBoard
+#### Step 2: Install PyTorch and TensorBoard
 ```bash
 conda install pytorch==1.13.1 pytorch-cuda=11.7 tensorboard -c pytorch -c nvidia
 ```
 
-#### Step 3: install the remaining dependencies
+#### Step 3: Install the remaining dependencies
 ```bash
 conda install datasets accelerate safetensors chardet cchardet -c huggingface -c conda-forge
 pip3 install transformers sentencepiece einops triton==1.0.0 rouge jionlp==1.4.14 nltk sacrebleu cpm_kernels
@@ -64,9 +68,40 @@ apt install libaio-dev
 DS_BUILD_OPS=1 pip install deepspeed
 ```
 
-### 👉 Start Training
+## ✨ Start training your own model!
+Run code in a few steps.
 
-TODO, To be finalised before 15. July 2023
+### Step 1: Recover Reward model weights
+We can not directly release the full weight of the reward model because of protocol restrictions.
+You can merge the diff weight with original Llama-7B to recover the reward model we used.
+
+We upload the diff models, thanks to tatsu-lab, you can recover the reward model follow these steps:
+```bash
+1) Download the weight diff into your local machine. The weight diff is located at:
+# For English:
+TODO
+# For Chinese:
+https://huggingface.co/Ablustrund/moss-rlhf-reward-model-7B-zh/tree/main
+
+2) Merge the weight diff with the original Llama-7B:
+# For English:
+TODO
+# For Chinese:
+python merge_weight_zh.py recover --path_raw decapoda-research/llama-7b-hf --path_diff ./models/moss-rlhf-reward-model-7B-zh/diff --path_tuned ./models/moss-rlhf-reward-model-7B-zh/recover
+```
+### Step 2: Select your own SFT model
+Because of some limitations, we can not release the **Chinese** SFT model (Currently).
+You can use your own SFT model, or a strong base model instead of our SFT model.
+
+### Step 3: Start training
+Run the command below.
+```
+# For Chinese:
+bash run_zh.sh
+
+# For English:
+TODO
+```
 
 ## Citation
 

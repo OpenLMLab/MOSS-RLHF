@@ -6,11 +6,11 @@ CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6 \
 accelerate launch \
     --config_file accelerate_config.yaml \
 train_ppo.py \
-    --tokenizer_name_or_path /home/xxx/MOSS-RLHF/models/open-chinese-llama-7b \
-    --policy_model_path /home/xxx/MOSS-RLHF/models/sft_model \
-    --critic_model_path /home/xxx/MOSS-RLHF/models/rm_model \
-    --model_save_path /home/xxx/MOSS-RLHF/outputs/models/ppo/ppo_model \
-    --data_path /home/xxx/MOSS-RLHF/data/ppo_data \
+    --tokenizer_name_or_path models/moss-rlhf-reward-model-7B-zh \
+    --policy_model_path models/sft_model \
+    --critic_model_path models/moss-rlhf-reward-model-7B-zh/recover \
+    --model_save_path outputs/models/ppo/ppo_model \
+    --data_path data/ppo_data \
     --seed 42 \
     --maxlen_prompt 2048 \
     --maxlen_res 512 \
