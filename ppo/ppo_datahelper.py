@@ -27,6 +27,7 @@ def get_tokenizer(opt):
     tokenizer.pad_token_id = 0
     tokenizer.unk_token = tokenizer.pad_token
     tokenizer.unk_token_id = tokenizer.pad_token_id
+    # only zh need special tokens
     if opt.lang == 'zh':
         tokenizer.add_special_tokens({"additional_special_tokens": [get_human_prompt(opt), get_assistant_prompt(opt)]})
     print_rank_0(f"Llama tokenizer size: {tokenizer.vocab_size}", only_on_cuda0=True)
