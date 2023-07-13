@@ -6,10 +6,10 @@ CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6 \
 accelerate launch \
     --config_file accelerate_config.yaml \
 train_ppo.py \
-    --tokenizer_name_or_path models/moss-rlhf-reward-model-7B-zh \
+    --tokenizer_name_or_path models/moss-rlhf-reward-model-7B-en \
     --policy_model_path models/sft_model \
-    --critic_model_path models/moss-rlhf-reward-model-7B-zh/recover \
-    --model_save_path outputs/models/ppo/ppo_model_zh \
+    --critic_model_path models/moss-rlhf-reward-model-7B-en/recover \
+    --model_save_path outputs/models/ppo/ppo_model_en \
     --data_path data/ppo_data \
     --seed 42 \
     --maxlen_prompt 2048 \
@@ -24,7 +24,7 @@ train_ppo.py \
     --reward_clip 0. \
     --entropy_loss_weight 0. \
     --ppo_pretrain_loss_weight 0. \
-    --kl_penalty_weight 0.1 \
+    --kl_penalty_weight 0.01 \
     --use_reward_scaling \
     --use_critic_loss_clip \
     --use_policy_loss_clip \
@@ -35,6 +35,6 @@ train_ppo.py \
     --rollout_batch_size 2 \
     --num_rollouts 2 \
     --gradient_checkpoint \
-    --lang zh \
+    --lang en \
     --logdir outputs/tensorboard_log/ppo/ppo_model \
 &> outputs/log/ppo_model.log

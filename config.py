@@ -63,6 +63,9 @@ def parse_args():
     parser.add_argument('--repetition_penalty', type=float, default=1.1, help='repetition penalty')
     parser.add_argument('--topp', type=float, default=0.9, help='nucleus sampling')
     
+    # Option for language
+    parser.add_argument('--lang', type=str, choices=['zh', 'en'], help='special prompt choice for PPO-max-zh or PPO-max-en')
+
     opt = parser.parse_args()
 
     return opt
