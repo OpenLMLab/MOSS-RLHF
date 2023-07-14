@@ -50,6 +50,15 @@ def make_diff(
             torch_dtype=torch.float32,
             low_cpu_mem_usage=True,
         )
+    elif model_type == 'policy':
+        model_tuned = Llama.from_pretrained(
+            path_tuned,
+            opt=None,
+            tokenizer=None,
+            device_map={"": torch.device(device)},
+            torch_dtype=torch.float32,
+            low_cpu_mem_usage=True,
+        )
 
     model_raw = transformers.AutoModelForCausalLM.from_pretrained(
         path_raw,
@@ -129,6 +138,16 @@ def recover(
             low_cpu_mem_usage=True,
         )
         fill_value = 50874.84765625
+    elif model_type == 'policy':
+        model_recovered = Llama.from_pretrained(
+            path_diff,
+            opt=None,
+            tokenizer=None,
+            device_map={"": torch.device(device)},
+            torch_dtype=torch.float32,
+            low_cpu_mem_usage=True,
+        )
+        fill_value = 0
 
     state_dict_recovered = model_recovered.state_dict()
     state_dict_raw = model_raw.state_dict()

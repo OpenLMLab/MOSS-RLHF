@@ -21,12 +21,16 @@
 [moss-rlhf-sft-model-7B-en](https://huggingface.co/fnlp/moss-rlhf-sft-model-7B-en)
 <br>
 
+### 👉 Thu, 14. July 2023. We have released English policy model after aligning with RLHF! 
+[moss-rlhf-policy-model-7B-en](https://huggingface.co/fnlp/moss-rlhf-policy-model-7B-en)
+<br>
+
 ## 🧾 Open-source List
 - [x] Open source code for RL training in large language models.
 - [x] A 7B Chinese reward model based on openChineseLlama.
 - [x] A 7B English reward model based on Llama-7B.
 - [x] SFT model for English.
-- [ ] Policy model for English after RLHF.
+- [x] Policy model for English after RLHF.
 - ...
 
 ## 🌠 Introduction
@@ -85,7 +89,13 @@ We upload the diff models, thanks to tatsu-lab, you can recover the reward model
 ```bash
 1) Download the weight diff into your local machine. The weight diff is located at:
 # For English:
-TODO
+# SFT model
+https://huggingface.co/fnlp/moss-rlhf-sft-model-7B-en
+# Reward model
+https://huggingface.co/fnlp/moss-rlhf-reward-model-7B-en
+# Policy model
+https://huggingface.co/fnlp/moss-rlhf-policy-model-7B-en
+
 # For Chinese:
 https://huggingface.co/Ablustrund/moss-rlhf-reward-model-7B-zh/tree/main
 
@@ -96,7 +106,7 @@ python merge_weight_en.py recover --path_raw decapoda-research/llama-7b-hf --pat
 # SFT model
 python merge_weight_en.py recover --path_raw decapoda-research/llama-7b-hf --path_diff ./models/moss-rlhf-sft-model-7B-en/diff --path_tuned ./models/moss-rlhf-sft-model-7B-en/recover --model_type sft
 # Policy model
-TODO
+python merge_weight_en.py recover --path_raw decapoda-research/llama-7b-hf --path_diff ./models/moss-rlhf-policy-model-7B-en/diff --path_tuned ./models/moss-rlhf-policy-model-7B-en/recover --model_type policy
 # For Chinese:
 python merge_weight_zh.py recover --path_raw decapoda-research/llama-7b-hf --path_diff ./models/moss-rlhf-reward-model-7B-zh/diff --path_tuned ./models/moss-rlhf-reward-model-7B-zh/recover
 ```
