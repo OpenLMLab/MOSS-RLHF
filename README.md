@@ -15,11 +15,17 @@
 [moss-rlhf-reward-model-7B-zh](https://huggingface.co/Ablustrund/moss-rlhf-reward-model-7B-zh/tree/main)
 <br>
 
+### 👉 Thu, 13. July 2023. We have released English reward model and SFT model based Llama-7B! 
+[moss-rlhf-reward-model-7B-en](https://huggingface.co/fnlp/moss-rlhf-reward-model-7B-en)
+
+[moss-rlhf-sft-model-7B-en](https://huggingface.co/fnlp/moss-rlhf-sft-model-7B-en)
+<br>
+
 ## 🧾 Open-source List
 - [x] Open source code for RL training in large language models.
 - [x] A 7B Chinese reward model based on openChineseLlama.
-- [ ] A 7B English reward model based on Llama-7B.
-- [ ] SFT model for English.
+- [x] A 7B English reward model based on Llama-7B.
+- [x] SFT model for English.
 - [ ] Policy model for English after RLHF.
 - ...
 
@@ -85,11 +91,16 @@ https://huggingface.co/Ablustrund/moss-rlhf-reward-model-7B-zh/tree/main
 
 2) Merge the weight diff with the original Llama-7B:
 # For English:
+# Reward model
+python merge_weight_en.py recover --path_raw decapoda-research/llama-7b-hf --path_diff ./models/moss-rlhf-reward-model-7B-en/diff --path_tuned ./models/moss-rlhf-reward-model-7B-en/recover --model_type reward
+# SFT model
+python merge_weight_en.py recover --path_raw decapoda-research/llama-7b-hf --path_diff ./models/moss-rlhf-sft-model-7B-en/diff --path_tuned ./models/moss-rlhf-sft-model-7B-en/recover --model_type sft
+# Policy model
 TODO
 # For Chinese:
 python merge_weight_zh.py recover --path_raw decapoda-research/llama-7b-hf --path_diff ./models/moss-rlhf-reward-model-7B-zh/diff --path_tuned ./models/moss-rlhf-reward-model-7B-zh/recover
 ```
-### Step 2: Select your own SFT model
+### Step 2: Select your own SFT model.
 Because of some limitations, we can not release the **Chinese** SFT model (Currently).
 You can use your own SFT model, or a strong base model instead of our SFT model.
 
@@ -97,10 +108,12 @@ You can use your own SFT model, or a strong base model instead of our SFT model.
 Run the command below.
 ```
 # For Chinese:
+# You need to use your own sft model currently.
 bash run_zh.sh
 
 # For English:
-TODO
+# We have loaded the sft model and reward model to huggingface.
+bash run_en.sh
 ```
 
 ## Citation

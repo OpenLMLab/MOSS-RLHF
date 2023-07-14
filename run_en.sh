@@ -7,7 +7,7 @@ accelerate launch \
     --config_file accelerate_config.yaml \
 train_ppo.py \
     --tokenizer_name_or_path models/moss-rlhf-reward-model-7B-en \
-    --policy_model_path models/sft_model \
+    --policy_model_path models/moss-rlhf-sft-model-7B-en/recover \
     --critic_model_path models/moss-rlhf-reward-model-7B-en/recover \
     --model_save_path outputs/models/ppo/ppo_model_en \
     --data_path data/ppo_data \
@@ -36,5 +36,5 @@ train_ppo.py \
     --num_rollouts 2 \
     --gradient_checkpoint \
     --lang en \
-    --logdir outputs/tensorboard_log/ppo/ppo_model \
-&> outputs/log/ppo_model.log
+    --logdir outputs/tensorboard_log/ppo/ppo_model_en \
+&> outputs/log/ppo_model_en.log

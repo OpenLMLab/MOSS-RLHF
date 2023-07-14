@@ -36,5 +36,5 @@ train_ppo.py \
     --num_rollouts 2 \
     --gradient_checkpoint \
     --lang zh \
-    --logdir outputs/tensorboard_log/ppo/ppo_model \
-&> outputs/log/ppo_model.log
+    --logdir outputs/tensorboard_log/ppo/ppo_model_zh \
+&> outputs/log/ppo_model_zh.log
