@@ -21,7 +21,7 @@
 [moss-rlhf-sft-model-7B-en](https://huggingface.co/fnlp/moss-rlhf-sft-model-7B-en)
 <br>
 
-### 👉 Thu, 14. July 2023. We have released English policy model after aligning with RLHF! 
+### 👉 Wait a minute ! ~Thu, 14. July 2023. We have released English policy model after aligning with RLHF!~ 
 [moss-rlhf-policy-model-7B-en](https://huggingface.co/fnlp/moss-rlhf-policy-model-7B-en)
 <br>
 
