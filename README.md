@@ -1,6 +1,14 @@
 # MOSS-RLHF
 
-### *MOSS-RLHF & "Secrets of RLHF in Large Language Models Part I: PPO" <br>👉 <a href="https://arxiv.org/abs/2307.04964" target="_blank">[Technical report]</a>  <a href="https://openlmlab.github.io/MOSS-RLHF/" target="_blank">[Home page]*
+**Congratulations**🎉🎉🎉 We received **the best paper award** at NIPS 2023 Workshop on Instruction Tuning and Instruction Following!
+
+撒花🎉🎉🎉，“Secrets of RLHF in Large Language Models Part I: PPO” 被 NIPS 2023 Workshop on Instruction Tuning and Instruction Following评为最佳论文！
+
+### *MOSS-RLHF <br>👉 <a href="https://openlmlab.github.io/MOSS-RLHF/" target="_blank">[Home page]*
+
+### *"Secrets of RLHF in Large Language Models Part I: PPO" <br>👉 <a href="https://arxiv.org/abs/2307.04964" target="_blank">[Technical report I]</a>*
+
+### *"Secrets of RLHF in Large Language Models Part II: Reward Modeling" <br>👉 <a href="https://arxiv.org/abs/TBD" target="_blank">[Technical report II]</a>*
 
 
 <p align="center" width="100%">
@@ -11,21 +19,21 @@
 [![Model License](https://img.shields.io/badge/Model%20License-GNU%20AGPL%203.0-red.svg)](./MODEL_LICENSE)
 
 ## 🌟🌟🌟 Breaking News
-### Congratulations🎉🎉🎉 We received the best paper award at NIPS 2023 Workshop on Instruction Tuning and Instruction Following!
+👉 Sat, 6. January 2024. We will release the second paper **"Secrets of RLHF in Large Language Models Part II: Reward Modeling"**!
 
 
 ## 🌟 News
-### 👉 Wed, 12. July 2023. We have released Chinese reward model based OpenChineseLlama-7B! 
+👉 Wed, 12. July 2023. We have released Chinese reward model based OpenChineseLlama-7B! 
 [moss-rlhf-reward-model-7B-zh](https://huggingface.co/Ablustrund/moss-rlhf-reward-model-7B-zh/tree/main)
 <br>
 
-### 👉 Thu, 13. July 2023. We have released English reward model and SFT model based Llama-7B! 
+👉 Thu, 13. July 2023. We have released English reward model and SFT model based Llama-7B! 
 [moss-rlhf-reward-model-7B-en](https://huggingface.co/fnlp/moss-rlhf-reward-model-7B-en)
 
 [moss-rlhf-sft-model-7B-en](https://huggingface.co/fnlp/moss-rlhf-sft-model-7B-en)
 <br>
 
-### 👉 Wait a minute ! Thu, 14. July 2023. We have released English policy model after aligning with RLHF!
+👉 Wait a minute ! Thu, 14. July 2023. We have released English policy model after aligning with RLHF!
 [moss-rlhf-policy-model-7B-en](https://huggingface.co/fnlp/moss-rlhf-policy-model-7B-en)
 <br>
 
