@@ -2,14 +2,7 @@
 
 **Congratulations**🎉🎉🎉 We received **the best paper award** at NIPS 2023 Workshop on Instruction Tuning and Instruction Following!
 
-撒花🎉🎉🎉，“Secrets of RLHF in Large Language Models Part I: PPO” 被 NIPS 2023 Workshop on Instruction Tuning and Instruction Following评为最佳论文！
-
-### *MOSS-RLHF <br>👉 <a href="https://openlmlab.github.io/MOSS-RLHF/" target="_blank">[Home page]*
-
-### *"Secrets of RLHF in Large Language Models Part I: PPO" <br>👉 <a href="https://arxiv.org/abs/2307.04964" target="_blank">[Technical report I]</a>*
-
-### *"Secrets of RLHF in Large Language Models Part II: Reward Modeling" <br>👉 <a href="https://arxiv.org/abs/TBD" target="_blank">[Technical report II]</a>*
-
+庆祝🎉🎉🎉, "Secrets of RLHF in Large Language Models Part I: PPO" 荣获 NIPS 2023 Workshop on Instruction Tuning and Instruction Following 最佳论文奖！！！
 
 <p align="center" width="100%">
 <a href="https://arxiv.org/abs/2307.04964" target="_blank"><img src="./assets/img/moss.png" alt="MOSS" style="width: 50%; min-width: 300px; display: block; margin: auto;"></a>
@@ -17,6 +10,13 @@
 [![Code License](https://img.shields.io/badge/Code%20License-Apache_2.0-brightgreen.svg)](./LICENSE)
 [![Data License](https://img.shields.io/badge/Data%20License-CC%20BY--NC%204.0-blue.svg)](./DATA_LICENSE)
 [![Model License](https://img.shields.io/badge/Model%20License-GNU%20AGPL%203.0-red.svg)](./MODEL_LICENSE)
+
+### *MOSS-RLHF <br>👉 <a href="https://openlmlab.github.io/MOSS-RLHF/" target="_blank">[Home page]*
+
+### *"Secrets of RLHF in Large Language Models Part I: PPO" <br>👉 <a href="https://arxiv.org/abs/2307.04964" target="_blank">[Technical report I]</a>*
+
+### *"Secrets of RLHF in Large Language Models Part II: Reward Modeling" <br>👉 <a href="https://arxiv.org/abs/TBD" target="_blank">[Technical report II]</a>*
+
 
 ## 🌟🌟🌟 Breaking News
 👉 Wait a minute ! The Code of the second paper is coming soon!
