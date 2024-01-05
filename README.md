@@ -19,6 +19,8 @@
 [![Model License](https://img.shields.io/badge/Model%20License-GNU%20AGPL%203.0-red.svg)](./MODEL_LICENSE)
 
 ## 🌟🌟🌟 Breaking News
+👉 Wait a minute ! The Code of the second paper is coming soon!
+
 👉 Sat, 6. January 2024. We will release the second paper **"Secrets of RLHF in Large Language Models Part II: Reward Modeling"**!
 
 
