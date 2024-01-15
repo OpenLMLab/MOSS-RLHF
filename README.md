@@ -11,11 +11,11 @@
 [![Data License](https://img.shields.io/badge/Data%20License-CC%20BY--NC%204.0-blue.svg)](./DATA_LICENSE)
 [![Model License](https://img.shields.io/badge/Model%20License-GNU%20AGPL%203.0-red.svg)](./MODEL_LICENSE)
 
-### *MOSS-RLHF `<br>`👉 `<a href="https://openlmlab.github.io/MOSS-RLHF/" target="_blank">`[Home page]*
+### *MOSS-RLHF  👉 <a href="https://openlmlab.github.io/MOSS-RLHF/" target="_blank">[Home page]*
 
-### *"Secrets of RLHF in Large Language Models Part I: PPO" `<br>`👉 `<a href="https://arxiv.org/abs/2307.04964" target="_blank">`[Technical report I]`</a>`*
+### *"Secrets of RLHF in Large Language Models Part I: PPO" 👉 <a href="https://arxiv.org/abs/2307.04964" target="_blank">[Technical report I]</a>*
 
-### *"Secrets of RLHF in Large Language Models Part II: Reward Modeling" `<br>`👉 `<a href="https://arxiv.org/abs/2401.06080" target="_blank">`[Technical report II]`</a>`*
+### *"Secrets of RLHF in Large Language Models Part II: Reward Modeling" 👉 <a href="https://arxiv.org/abs/2401.06080" target="_blank">[Technical report II]</a>*
 
 ## 🌟🌟🌟 Breaking News
 
