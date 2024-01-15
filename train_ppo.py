@@ -6,7 +6,7 @@ from typing import List
 import numpy as np
 import torch
 import torch.nn as nn
-from config import parse_args
+from config_ppo import parse_args
 from ppo.ppo_trainer import PPOTrainer
 from ppo.ppo_datahelper import get_tokenizer
 from utils import *
