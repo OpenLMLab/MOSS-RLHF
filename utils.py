@@ -3,7 +3,7 @@ import torch.nn.functional as F
 import logging
 from accelerate import Accelerator
 from accelerate.state import AcceleratorState
-from typing import Tuple
+from typing import Tuple, Callable
 
 accelerator = None
 
@@ -16,6 +16,19 @@ def setup_accelerator():
 def synchronize_if_distributed():
     if accelerator.use_distributed:
         accelerator.wait_for_everyone()
+        
+def synchronize_forward_on_stage3(done: bool, fake_forward_fn: Callable, **kwargs):
+    # synchronize to avoid deadlock on deepspeed stage3. do not call this if zero-3 is disabled
+    # https://github.com/microsoft/DeepSpeed/issues/860
+    if done:
+        sync = 1.
+        while sync > 1e-5:
+            fake_forward_fn(**kwargs)
+            sync = torch.tensor(0., device=accelerator.device)
+            sync = accelerator.reduce(sync).item()
+    else:
+        sync = torch.tensor(1., device=accelerator.device)
+        sync = accelerator.reduce(sync)
 
 def to_cuda(batch):
     for k, v in batch.items():
@@ -160,11 +173,11 @@ def get_category_distribution_entropy(bsz, logits):
     ent = logits_distribution.entropy().reshape(bsz, -1)
     return ent
 
-def pad_sequences(seqs, pad_value, padding='right'):
+def pad_sequences(seqs, pad_value, padding='right', pad_to: int=None):
     """
     Padding sequence to the same length
     """
-    max_len = max(len(seq) for seq in seqs)
+    max_len = max(len(seq) for seq in seqs) if pad_to is None else pad_to
     if padding == 'right':
         padded_seqs = [seq + [pad_value] * (max_len - len(seq)) for seq in seqs]
     elif padding == 'left':
