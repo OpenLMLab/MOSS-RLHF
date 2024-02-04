@@ -186,3 +186,13 @@ bash train_rm.sh
       primaryClass={cs.CL}
 }
 ```
+```bibtex
+@misc{wang2024secrets,
+      title={Secrets of RLHF in Large Language Models Part II: Reward Modeling}, 
+      author={Binghai Wang and Rui Zheng and Lu Chen and Yan Liu and Shihan Dou and Caishuang Huang and Wei Shen and Senjie Jin and Enyu Zhou and Chenyu Shi and Songyang Gao and Nuo Xu and Yuhao Zhou and Xiaoran Fan and Zhiheng Xi and Jun Zhao and Xiao Wang and Tao Ji and Hang Yan and Lixing Shen and Zhan Chen and Tao Gui and Qi Zhang and Xipeng Qiu and Xuanjing Huang and Zuxuan Wu and Yu-Gang Jiang},
+      year={2024},
+      eprint={2401.06080},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI}
+}
+```
